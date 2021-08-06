@@ -67,4 +67,9 @@ root@pp003:~#
 [-] exit.
 
 
+拿到ak sk后，可以结合 aksk_tool，进一步利用
+
 ```
+
+
+
