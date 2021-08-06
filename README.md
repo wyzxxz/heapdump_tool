@@ -14,7 +14,7 @@ usage:> java -jar heapdump_tool.jar  heapdump
 geturl
 getfile
 getip
-如果不存在key-value形式，默认不输出查询结果，需要输入all=true获取所有值，all=false取消显示所有值。
+默认不输出查询结果非key-value格式的数据，需要获取所有值，输入all=true，all=false取消显示所有值。
 
 ----------------------------------------------------
 
