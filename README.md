@@ -10,6 +10,10 @@ usage:> java -jar heapdump_tool.jar  heapdump
 1. 关键词    例如 password, accesskey 
 2. 字符长度   len=10    获取长度为10的所有key或者value值
 3. 按顺序获取  num=1-100 获取顺序1-100的字符
+获取url,file,ip
+geturl
+getfile
+getip
 如果不存在key-value形式，默认不输出查询结果，需要输入all=true获取所有值，all=false取消显示所有值。
 
 ----------------------------------------------------
