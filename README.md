@@ -2,7 +2,8 @@
 
 ```
 
-该工具是基于jhat ，通过jhat解析heapdump文件， 所以需要安装jdk和配置好环境变量，例如win \Java\jdk8\bin\jhat.exe， 在控制台输入jhat检查是否安装正确。
+该工具是基于jhat，通过jhat解析heapdump文件，所以需要安装jdk和配置好环境变量，例如win \Java\jdk8\bin\jhat.exe， 
+在控制台输入jhat检查是否安装正确。
 
 usage:> java -jar heapdump_tool.jar  heapdump
 查询方式：
