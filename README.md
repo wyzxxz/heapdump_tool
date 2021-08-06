@@ -11,9 +11,9 @@ usage:> java -jar heapdump_tool.jar  heapdump
 2. 字符长度   len=10    获取长度为10的所有key或者value值
 3. 按顺序获取  num=1-100 获取顺序1-100的字符
 获取url,file,ip
-geturl
-getfile
-getip
+geturl   获取所有字符串中的url
+getfile  获取所有字符串中的文件路径文件名
+getip    获取所有字符串中的ip
 默认不输出查询结果非key-value格式的数据，需要获取所有值，输入all=true，all=false取消显示所有值。
 
 ----------------------------------------------------
