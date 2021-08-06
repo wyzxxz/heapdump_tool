@@ -51,7 +51,7 @@ origin: "URL [file:/home/test/deploy/config/application-pressure.yml]:6:15"
 获取 spring.datasource.password ，页面返回内容为 *******
 
 下载 heapdump 文件， 然后使用工具
-root@pp003:~# 
+root@wy:~# 
 > java -jar heapdump_tool.jar  heapdump.6
 [-] file: heapdump.6
 [-] Start jhat, waiting...
