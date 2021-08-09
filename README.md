@@ -26,6 +26,9 @@ getip    获取所有字符串中的ip
 
 这时候就可以利用 该 工具来获取 /heapdump 或 /actuator/heapdump 接口下载的 jvm heap 信息，查找密码或AK(accessKey)等敏感信息。
 
+>>>>>>>>>>>  有时候下载到的heapdump文件是 压缩 过的，需要 解压 下再使用工具进行读取。
+
+
 
 访问 /actuator/env  得到部分信息如下
 
