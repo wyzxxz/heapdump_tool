@@ -2,6 +2,7 @@
 
 ```
 优化了使用体感和部分调优。
+add 对gz文件自动解压
 
 
 该工具是基于jhat，通过jhat解析heapdump文件，所以需要安装jdk和配置好环境变量，例如win \Java\jdk8\bin\jhat.exe， 
