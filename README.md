@@ -24,11 +24,11 @@ getip    获取所有字符串中的ip
 
 常见的heapdump泄露，大多都是spring heapdump泄露
 
-这里 以spring heapdump泄露 为例
+这里以spring heapdump泄露 为例
 
-访问 /env 或 /actuator/env 接口时，spring actuator 会将一些带有敏感关键词 (如 password、secret) 的属性名对应的属性值用 ****** 号替换，以达到脱敏的效果。
+访问/env 或/actuator/env接口时,spring actuator会将一些带有敏感关键词 (如 password) 的属性名对应的属性值用 ***** 号替换，以达到脱敏的效果。
 
-这时候就可以利用 该 工具来获取 /heapdump 或 /actuator/heapdump 接口下载的 jvm heap 信息，查找password 或 Key, token 等敏感信息。
+这时候就可以利用该工具来获取/heapdump 或/actuator/heapdump 接口下载的 jvm heap 信息，查找password 或 Key, token 等敏感信息。
 
 >>>>>>>>>>>  有时候下载到的heapdump文件是 压缩 过的，需要 解压 下再使用工具进行读取。
 
