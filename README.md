@@ -11,7 +11,7 @@
 
 usage:> java -jar heapdump_tool.jar  heapdump
 查询方式：
-1. 关键词    例如 password, accesskey 
+1. 关键词    例如 password 
 2. 字符长度   len=10    获取长度为10的所有key或者value值
 3. 按顺序获取  num=1-100 获取顺序1-100的字符
 获取url,file,ip
@@ -28,7 +28,7 @@ getip    获取所有字符串中的ip
 
 访问 /env 或 /actuator/env 接口时，spring actuator 会将一些带有敏感关键词 (如 password、secret) 的属性名对应的属性值用 ****** 号替换，以达到脱敏的效果。
 
-这时候就可以利用 该 工具来获取 /heapdump 或 /actuator/heapdump 接口下载的 jvm heap 信息，查找密码或AK(accessKey)等敏感信息。
+这时候就可以利用 该 工具来获取 /heapdump 或 /actuator/heapdump 接口下载的 jvm heap 信息，查找password 或 Key, token 等敏感信息。
 
 >>>>>>>>>>>  有时候下载到的heapdump文件是 压缩 过的，需要 解压 下再使用工具进行读取。
 
@@ -64,21 +64,20 @@ root@wy:~#
 [-] Start jhat, waiting...
 [-] get objects,waiting(1-2min)...
 [-] fing object count: 113128
-[-] please input keyword value to search, example: accesskey,len=16,num=0-10,all=true input q/quit to quit.
+[-] please input keyword value to search, example: password,len=16,num=0-10,all=true,geturl,getfile,getip input q/quit to quit.
 > spring.datasource.password
 [-] Start find keyword: spring.datasource.password
 >> spring.datasource.password -> test@wyzxxz 
-[-] please input keyword value to search, example: accesskey,len=16,num=0-10,all=true input q/quit to quit.
+[-] please input keyword value to search, example: password,len=16,num=0-10,all=true,geturl,getfile,getip input q/quit to quit.
 > accesskey
 [-] Start find keyword: accessKey
 >> ConnectionProperties.noAccessToProcedureBodies -> When determining procedure parameter types for CallableStatements, and the connected user can&#039;&#039;t access procedure bodies through &quot;SHOW CREATE PROCEDURE&quot; or select on mysql.proc should the driver instead create basic metadata
 >> accessKey -> LTA**************
-[-] please input keyword value to search, example: accesskey,len=16,num=0-10,all=true input q/quit to quit.
+[-] please input keyword value to search, example: password,len=16,num=0-10,all=true,geturl,getfile,getip input q/quit to quit.
 > q
 [-] exit.
 
 
-拿到ak sk后，可以结合 aksk_tool，进一步利用
 
 ```
 
