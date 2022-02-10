@@ -28,14 +28,6 @@ getip    获取所有字符串中的ip
 
 这里以spring heapdump泄露 为例
 
-访问/env 或/actuator/env接口时,spring actuator会将一些带有敏感关键词 (如 password) 的属性名对应的属性值用 ***** 号替换，以达到脱敏的效果。
-
-这时候就可以利用该工具来获取/heapdump 或/actuator/heapdump 接口下载的 jvm heap 信息，查找password 或 Key, token 等敏感信息。
-
->>>>>>>>>>>  有时候下载到的heapdump文件是 压缩 过的，需要 解压 下再使用工具进行读取。
-
-
-
 访问 /actuator/env  得到部分信息如下
 
 properties: {
@@ -56,8 +48,7 @@ value: "******",
 origin: "URL [file:/home/test/deploy/config/application-pressure.yml]:6:15"
 },
 
-
-获取 spring.datasource.password ，页面返回内容为 *******
+页面返回内容 spring.datasource.password 的值为 *******
 
 下载 heapdump 文件， 然后使用工具
 root@wy:~# 
