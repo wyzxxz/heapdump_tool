@@ -2,6 +2,8 @@
 
 ```
 声明： 此工具仅用于企业安全人员自查验证自身企业资产的安全风险，或有合法授权的安全测试，请勿用于其他用途，如有，后果自负。
+下载地址：https://toolaffix.oss-cn-beijing.aliyuncs.com/heapdump_tool.jar
+
 
 + 使用体感和部分功能调优。
 + 对gz文件自动解压
