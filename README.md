@@ -22,6 +22,7 @@ usage:> java -jar heapdump_tool.jar  heapdump
 3. 按顺序获取   num=1-100 获取顺序1-100的字符
 4. class模糊搜索  class=xxx 获取class的instance数据信息
 5. id查询       id=0xaaaaa  获取id为0xaaaaa的class或者object数据信息
+4. re正则查询    re=xxx  自定义正则查询数据信息
 获取url,file,ip
 shirokey 获取shirokey的值
 geturl   获取所有字符串中的url
