@@ -5,7 +5,7 @@
 下载地址：https://toolaffix.oss-cn-beijing.aliyuncs.com/wyzxxz/20230406/heapdump_tool.jar
 
 + 新增shirokey查找识别，输入shirokey即可
-+ class方式信息模糊查询， 例如 class=shiro.web.mgt , class方式很多数据都可以挖出来，大家自己尝试
++ class方式信息模糊查询， 例如 class=shiro.web.mgt , class方式可以挖出来更多的数据，大家自己尝试
 
 + 使用体感和部分功能调优。
 + 对gz文件自动解压
@@ -17,10 +17,11 @@
 
 usage:> java -jar heapdump_tool.jar  heapdump
 查询方式：
-1. 关键词    例如 password 
-2. 字符长度   len=10    获取长度为10的所有key或者value值
-3. 按顺序获取  num=1-100 获取顺序1-100的字符
+1. 关键词       例如 password 
+2. 字符长度     len=10    获取长度为10的所有key或者value值
+3. 按顺序获取   num=1-100 获取顺序1-100的字符
 4. class模糊搜索  class=xxx 获取class的instance数据信息
+5. id查询       id=0xaaaaa  获取id为0xaaaaa的class或者object数据信息
 获取url,file,ip
 shirokey 获取shirokey的值
 geturl   获取所有字符串中的url
