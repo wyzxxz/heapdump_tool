@@ -109,8 +109,8 @@ root@wy:~#
 - - - - - - - -> value -> &lt;null&gt;
 - - - - - - - -> version -> -1
 - - - -> cookie ->
-- - - -> decryptionCipherKey -> {0x28, .....}
-- - - -> encryptionCipherKey -> {0x28, .....}
+- - - -> decryptionCipherKey -> xxxx
+- - - -> encryptionCipherKey -> xxxx
 - - - -> org.apache.shiro.io.DefaultSerializer
 - - - -> serializer ->
 [-] please input keyword value to search, example: password,re=xxx,len=16,num=0-10,id=0x123a,class=org.xx,all=true,geturl,getfile,getip,shirokey input q/quit to quit.
