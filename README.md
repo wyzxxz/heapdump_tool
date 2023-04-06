@@ -2,8 +2,10 @@
 
 ```
 声明： 此工具仅用于企业安全人员自查验证自身企业资产的安全风险，或有合法授权的安全测试，请勿用于其他用途，如有，后果自负。
-下载地址：https://toolaffix.oss-cn-beijing.aliyuncs.com/wyzxxz/20230403/heapdump_tool.jar
+下载地址：https://toolaffix.oss-cn-beijing.aliyuncs.com/wyzxxz/20230406/heapdump_tool.jar
 
++ 新增shirokey查找识别，输入shirokey即可
++ class方式信息模糊查询， 例如 class=shiro.web.mgt , class方式很多数据都可以挖出来，大家自己尝试
 
 + 使用体感和部分功能调优。
 + 对gz文件自动解压
@@ -18,7 +20,9 @@ usage:> java -jar heapdump_tool.jar  heapdump
 1. 关键词    例如 password 
 2. 字符长度   len=10    获取长度为10的所有key或者value值
 3. 按顺序获取  num=1-100 获取顺序1-100的字符
+4. class模糊搜索  class=xxx 获取class的instance数据信息
 获取url,file,ip
+shirokey 获取shirokey的值
 geturl   获取所有字符串中的url
 getfile  获取所有字符串中的文件路径文件名
 getip    获取所有字符串中的ip
@@ -55,20 +59,59 @@ origin: "URL [file:/home/test/deploy/config/application-pressure.yml]:6:15"
 下载 heapdump 文件， 然后使用工具
 root@wy:~# 
 > java -jar heapdump_tool.jar  heapdump.6
-[-] file: heapdump.6
 [-] Start jhat, waiting...
-[-] get objects,waiting(1-2min)...
-[-] fing object count: 113128
-[-] please input keyword value to search, example: password,len=16,num=0-10,all=true,geturl,getfile,getip input q/quit to quit.
+[-] fing object count: 100000
+[-] too many object,please input 0/1 to choose mode.
+0. (search data, may can't find some data, can't use function num=,len=).
+1. (load all object, need wait a few minutes).
+> 0
+[-] please input keyword value to search, example: password,re=xxx,len=16,num=0-10,id=0x123a,class=org.xx,all=true,geturl,getfile,getip,shirokey input q/quit to quit.
 > spring.datasource.password
 [-] Start find keyword: spring.datasource.password
 >> spring.datasource.password -> test@wyzxxz 
-[-] please input keyword value to search, example: password,len=16,num=0-10,all=true,geturl,getfile,getip input q/quit to quit.
+[-] please input keyword value to search, example: password,re=xxx,len=16,num=0-10,id=0x123a,class=org.xx,all=true,geturl,getfile,getip,shirokey input q/quit to quit.
 > accesskey
 [-] Start find keyword: accessKey
 >> ConnectionProperties.noAccessToProcedureBodies -> When determining procedure parameter types for CallableStatements, and the connected user can&#039;&#039;t access procedure bodies through &quot;SHOW CREATE PROCEDURE&quot; or select on mysql.proc should the driver instead create basic metadata
 >> accessKey -> LTA**************
-[-] please input keyword value to search, example: password,len=16,num=0-10,all=true,geturl,getfile,getip input q/quit to quit.
+[-] please input keyword value to search, example: password,re=xxx,len=16,num=0-10,id=0x123a,class=org.xx,all=true,geturl,getfile,getip,shirokey input q/quit to quit.
+> shirokey
+>> kPH+bIxk5D2deZiIxcaaaA==
+[-] please input keyword value to search, example: password,re=xxx,len=16,num=0-10,id=0x123a,class=org.xx,all=true,geturl,getfile,getip,shirokey input q/quit to quit.
+> class=shiro.web.mgt
+- > org.apache.shiro.web.mgt.CookieRememberMeManager
+- - - -> org.apache.shiro.crypto.AesCipherService
+- - - - - - - -> algorithmName -> AES
+- - - - - - - -> blockSize -> 0
+- - - - - - - -> generateInitializationVectors -> true
+- - - - - - - -> initializationVectorSize -> 128
+- - - - - - - -> keySize -> 128
+- - - - - - - -> modeName -> CBC
+- - - - - - - -> paddingSchemeName -> PKCS5Padding
+- - - - - - - -> secureRandom -> &lt;null&gt;
+- - - - - - - -> streamingBlockSize -> 8
+- - - - - - - -> streamingBufferSize -> 512
+- - - - - - - -> streamingModeName -> CBC
+- - - - - - - -> streamingPaddingSchemeName -> PKCS5Padding
+- - - - - - - -> streamingTransformationString -> &lt;null&gt;
+- - - - - - - -> transformationString -> &lt;null&gt;
+- - - -> cipherService ->
+- - - -> org.apache.shiro.web.servlet.SimpleCookie
+- - - - - - - -> comment -> &lt;null&gt;
+- - - - - - - -> domain -> &lt;null&gt;
+- - - - - - - -> httpOnly -> true
+- - - - - - - -> maxAge -> 31536000
+- - - - - - - -> name -> rememberMe
+- - - - - - - -> path -> &lt;null&gt;
+- - - - - - - -> secure -> false
+- - - - - - - -> value -> &lt;null&gt;
+- - - - - - - -> version -> -1
+- - - -> cookie ->
+- - - -> decryptionCipherKey -> {0x28, .....}
+- - - -> encryptionCipherKey -> {0x28, .....}
+- - - -> org.apache.shiro.io.DefaultSerializer
+- - - -> serializer ->
+[-] please input keyword value to search, example: password,re=xxx,len=16,num=0-10,id=0x123a,class=org.xx,all=true,geturl,getfile,getip,shirokey input q/quit to quit.
 > q
 [-] exit.
 
