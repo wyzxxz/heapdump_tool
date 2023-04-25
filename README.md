@@ -2,10 +2,13 @@
 
 ```
 声明： 此工具仅用于企业安全人员自查验证自身企业资产的安全风险，或有合法授权的安全测试，请勿用于其他用途，如有，后果自负。
-下载地址：https://toolaffix.oss-cn-beijing.aliyuncs.com/wyzxxz/20230423/heapdump_tool.jar
+下载地址：https://toolaffix.oss-cn-beijing.aliyuncs.com/wyzxxz/20230425/heapdump_tool.jar
 
-+ 20230423
+
++ 20230425
++ 新增功能hashtable读取，可获取比较多的信息, 结果展示优化
 + 新增2个功能systemproperties,allproperties，读取properties数据
+
 
 + 20230406
 + 新增shirokey查找识别，输入shirokey即可
@@ -71,19 +74,19 @@ root@wy:~#
 0. (search data, may can't find some data, can't use function num=,len=).
 1. (load all object, need wait a few minutes).
 > 0
-[-] please input keyword value to search, example: password,re=xxx,len=16,num=0-10,id=0x123a,class=org.xx,all=true,geturl,getfile,getip,shirokey,systemproperties,allproperties input q/quit to quit.
+[-] please input keyword value to search, example: password,re=xxx,len=16,num=0-10,id=0x123a,class=org.xx,all=true,geturl,getfile,getip,shirokey,systemproperties,allproperties,hashtable input q/quit to quit.
 > spring.datasource.password
 [-] Start find keyword: spring.datasource.password
 >> spring.datasource.password -> test@wyzxxz 
-[-] please input keyword value to search, example: password,re=xxx,len=16,num=0-10,id=0x123a,class=org.xx,all=true,geturl,getfile,getip,shirokey,systemproperties,allproperties input q/quit to quit.
+[-] please input keyword value to search, example: password,re=xxx,len=16,num=0-10,id=0x123a,class=org.xx,all=true,geturl,getfile,getip,shirokey,systemproperties,allproperties,hashtable input q/quit to quit.
 > accesskey
 [-] Start find keyword: accessKey
 >> ConnectionProperties.noAccessToProcedureBodies -> When determining procedure parameter types for CallableStatements, and the connected user can&#039;&#039;t access procedure bodies through &quot;SHOW CREATE PROCEDURE&quot; or select on mysql.proc should the driver instead create basic metadata
 >> accessKey -> LTA**************
-[-] please input keyword value to search, example: password,re=xxx,len=16,num=0-10,id=0x123a,class=org.xx,all=true,geturl,getfile,getip,shirokey input q/quit to quit.
+[-] please input keyword value to search, example: password,re=xxx,len=16,num=0-10,id=0x123a,class=org.xx,all=true,geturl,getfile,getip,shirokey,systemproperties,allproperties,hashtable input q/quit to quit.
 > shirokey
 >> kPH+bIxk5D2deZiIxcaaaA==
-[-] please input keyword value to search, example: password,re=xxx,len=16,num=0-10,id=0x123a,class=org.xx,all=true,geturl,getfile,getip,shirokey input q/quit to quit.
+[-] please input keyword value to search, example: password,re=xxx,len=16,num=0-10,id=0x123a,class=org.xx,all=true,geturl,getfile,getip,shirokey,systemproperties,allproperties,hashtable input q/quit to quit.
 > class=shiro.web.mgt
 - > org.apache.shiro.web.mgt.CookieRememberMeManager
 - - - -> org.apache.shiro.crypto.AesCipherService
