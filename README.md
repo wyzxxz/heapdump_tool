@@ -6,6 +6,7 @@
 
 
 + 20230425
++ 输出内容会写到当前目录下 文件名_output.txt，方便随时查询
 + 新增功能hashtable读取，可获取比较多的信息, 结果展示优化
 + 新增2个功能systemproperties,allproperties，读取properties数据
 
