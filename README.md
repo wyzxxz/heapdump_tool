@@ -12,7 +12,7 @@
 
 + 20230406
 + 新增shirokey查找识别，输入shirokey即可
-+ class方式信息模糊查询， 例如 class=shiro.web.mgt , class方式可以挖出来更多的数据，大家自己尝试
++ class方式信息模糊查询， 例如 class=shiro.web.mgt ,  class=redis 可以搜到redis相关的配置, 等等，class方式可以挖出来更多的数据，大家自己尝试
 
 + 使用体感和部分功能调优。
 + 对gz文件自动解压
