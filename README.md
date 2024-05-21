@@ -2,7 +2,7 @@
 
 ```
 声明： 此工具仅用于企业安全人员自查验证自身企业资产的安全风险，或有合法授权的安全测试，请勿用于其他用途，如有，后果自负。
-下载地址：https://www.aliyundrive.com/s/GapNjP3a9Rx
+下载地址：https://share.feijipan.com/s/dFAuqYQy
 
 + 20230425
 + 输出内容会写到当前目录下 文件名_output.txt，方便随时查询
